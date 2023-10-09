@@ -1,4 +1,4 @@
-/**package org.example;**/
+package org.example;
 
 public class Server implements Runnable{
     String name;
