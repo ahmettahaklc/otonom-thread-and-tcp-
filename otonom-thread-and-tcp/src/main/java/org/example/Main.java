@@ -1,23 +1,18 @@
 package org.example;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.net.ServerSocket;
+public class Main {
 
-class Main {
+    public static void main(String[] args){
+        //Thread
+        //Thread (new Runnable)
 
-    public static void main(String[] args) throws Exception {
+        Server i1 = new Server("ilk");
+        Thread t1 = new Thread(i1);
 
-    try (ServerSocket serverSocket = new ServerSocket(8080)){
-        System.out.println("Server started. \n Listening for massages");
+        Server i2 = new Server("İki");
+        Thread t2 = new Thread(i2);
 
-        while(true){
-
-        }
-
-    }
-
+        t1.start();
+        t2.start();
 
     }
-
 }
